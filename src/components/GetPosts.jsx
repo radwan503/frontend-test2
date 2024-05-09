@@ -57,10 +57,10 @@ const GetPosts = () => {
     <div>
       <h2>Posts</h2>
       <ul>
-        {posts.slice(0, 10).map((post) => (
+        {posts.map((post) => (
           <li key={post.id}>
-            {post.title}
-            <a href={`/update/${post.id}`}>Edit</a>
+            {post.title}------
+            <a style={{ border: "1px solid #222", padding: "1px 8px", backgroundColor: "#f1f1f1", borderRadius: "3px" }} href={`/update/${post.id}`}>Edit</a>
             <button onClick={() => handleDelete(post.id)}>Delete</button>
           </li>
         ))}
